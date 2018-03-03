@@ -12,3 +12,12 @@ let cart: List<Int> = .nonEmpty(
                 head: 83, tail: .nonEmpty(
                     head: 3, tail: .nonEmpty(
                         head: 4, tail: .empty))))))
+
+func totalCost(of items: List<Int>) -> Int {
+    switch items {
+    case .empty:
+        return 0
+    case let .nonEmpty(head, tail):
+        return head + totalCost(of: tail)
+    }
+}
