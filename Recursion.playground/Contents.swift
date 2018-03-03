@@ -21,3 +21,5 @@ func totalCost(of items: List<Int>) -> Int {
         return head + totalCost(of: tail)
     }
 }
+
+totalCost(of: cart)
