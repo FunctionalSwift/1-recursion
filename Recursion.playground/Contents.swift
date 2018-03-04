@@ -13,7 +13,7 @@ let cart: List<Int> = .nonEmpty(
                     head: 3, tail: .nonEmpty(
                         head: 4, tail: .empty))))))
 
-func totalCost(items: List<Int>, accumulator: Int) -> Int {
+func totalCost(items: List<Int>, accumulator: Int = 0) -> Int {
     switch items {
     case .empty:
         return accumulator
